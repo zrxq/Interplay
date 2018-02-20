@@ -17,6 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        // auto-lock off
+        UIApplication.shared.isIdleTimerDisabled = true
+
+        // net context
         let name: String
         if let storedName = UserDefaults.musicianName {
             name = storedName
@@ -26,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let context = NetworkingContext(displayName: name, serviceType: AppDelegate.serviceType)
         
+        // window
         window = UIWindow()
         window?.backgroundColor = Style.windowBackground
         window?.tintColor = Style.defaultTint
