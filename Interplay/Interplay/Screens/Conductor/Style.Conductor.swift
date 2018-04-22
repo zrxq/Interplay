@@ -22,5 +22,8 @@ extension Style {
         enum MusicianCell {
             static let failureBackgroundColor = UIColor(hex: 0x550000)
         }
+        
+        static let tempoAttributes: [NSAttributedStringKey : Any] = [ .font: UIFont(name: "InputMono-Regular", size: 25)!, .foregroundColor: activeInformational,  .kern: -0.36 ]
+        
     }
 }

@@ -19,6 +19,7 @@ class LobbyViewController: UIViewController {
     #endif
     
     let context: NetworkingContext
+    let link: Link
     
     lazy var browser: MCNearbyServiceBrowser = {
         let browser = MCNearbyServiceBrowser(peer: context.localPeerID, serviceType: context.serviceType)
@@ -30,8 +31,9 @@ class LobbyViewController: UIViewController {
         return view as! LobbyView
     }
     
-    init(with context:NetworkingContext) {
+    init(context:NetworkingContext, link: Link) {
         self.context = context
+        self.link = link
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -64,6 +66,7 @@ class LobbyViewController: UIViewController {
         super.viewDidAppear(animated)
         startLookingForConductor()
         view.setNeedsLayout()
+        requestLinkActivationIfNeeded()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -73,6 +76,19 @@ class LobbyViewController: UIViewController {
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
+    }
+}
+
+// MARK: Ableton Link management
+extension LobbyViewController {
+    func requestLinkActivationIfNeeded() {
+        if !link.isEnabled {
+            let alert = UIAlertController(title: NSLocalizedString("Ableton Link", comment: "Ableton Link activation request alert title"), message: NSLocalizedString("Hey there! Please enable Ableton Link on the following screen. Ableton Link is the technology this app uses to play in time with other apps and devices.", comment: "Ableton Link activation request alert message"), preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("Fine, take me there", comment: "Ableton Link activation request alert action title"), style: .default, handler: { _ in
+                self.present(self.link.settings, animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true, completion: nil)
+        }
     }
 }
 
@@ -105,7 +121,6 @@ extension LobbyViewController: MCNearbyServiceBrowserDelegate  {
 // MARK: Actions
 extension LobbyViewController {
     @objc func becomeConductor(sender: Any?) {
-        let conductorCon = ConductViewController(with: context)
-        self.present(conductorCon, animated: false, completion: nil)
+        self.present(ConductViewController.navigationController(context: context, link: link), animated: false, completion: nil)
     }
 }

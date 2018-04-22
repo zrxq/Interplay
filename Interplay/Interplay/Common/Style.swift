@@ -30,5 +30,6 @@ enum Style {
             case .play: return UIColor(hexString:"#012313")
             }
         }
-    }    
+    }
+    
 }

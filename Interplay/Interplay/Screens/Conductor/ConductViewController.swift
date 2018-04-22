@@ -16,6 +16,10 @@ class ConductViewController: UIViewController {
     let context: NetworkingContext
     let session: MCSession
     
+    // link
+    let link: Link
+    var tempoDisplay: TempoDisplay
+    
     // models
     var musicians = [Musician]()
     
@@ -29,10 +33,14 @@ class ConductViewController: UIViewController {
         return advertiser
     }()
     
-    init(with context: NetworkingContext) {
+    init(context: NetworkingContext, link: Link, tempoDisplay: TempoDisplay) {
         // networking
         self.context = context
         session = MCSession(peer: context.localPeerID, securityIdentity: nil, encryptionPreference: .none)
+
+        // Link
+        self.link = link
+        self.tempoDisplay = tempoDisplay
         
         super.init(nibName: nil, bundle: nil)
         
@@ -47,28 +55,9 @@ class ConductViewController: UIViewController {
         } else {
             self.automaticallyAdjustsScrollViewInsets = false
         }
-
-        // test data
-        /*
-        self.musicians.append({
-            var m = Musician(with: context.localPeerID)
-            m.name = "Трус"
-            m.state = .signalConfirmed(.ready)
-            return m
-            }())
-        self.musicians.append({
-            var m = Musician(with: context.localPeerID)
-            m.name = "Балбес"
-            m.state = .signalConfirmed(.stop)
-            return m
-            }())
-        self.musicians.append({
-            var m = Musician(with: context.localPeerID)
-            m.name = "Бывалый"
-            m.state = .signalConfirmed(.play)
-            return m
-            }())
-        */
+        
+        edgesForExtendedLayout = UIRectEdge()
+    
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -87,6 +76,15 @@ class ConductViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         stopLookingForMusicians()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        NotificationCenter.default.addObserver(forName: Notification.Name.TJGLinkTempoDidChange, object: nil, queue: OperationQueue.main) { note in
+            if let newTempo = note.userInfo?[TJGTempoUserInfoKey] as? Double {
+                self.tempoDisplay.bpm = newTempo
+            }
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {

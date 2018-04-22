@@ -8,11 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5424FC6BE59D8DFC6C1BA326 /* Pods_Interplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8EF705A5FD97A769C918C1 /* Pods_Interplay.framework */; };
+		A71F4474205C663300A98656 /* libABLLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A71F4473205C663300A98656 /* libABLLink.a */; };
+		A71F447E205C681500A98656 /* TJGLink.m in Sources */ = {isa = PBXBuildFile; fileRef = A71F447D205C681500A98656 /* TJGLink.m */; };
 		A72C9FF02032CD3C0001C179 /* Style.Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C9FEF2032CD3C0001C179 /* Style.Conductor.swift */; };
 		A72C9FF22032CD9B0001C179 /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C9FF12032CD9B0001C179 /* Packet.swift */; };
 		A753D0A4203C004400B3A40D /* MusicianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753D0A3203C004400B3A40D /* MusicianView.swift */; };
 		A753D0A6203C063500B3A40D /* Style.Musician.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753D0A5203C063500B3A40D /* Style.Musician.swift */; };
 		A753D0A8203C8DBC00B3A40D /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753D0A7203C8DBC00B3A40D /* UserDefaults.swift */; };
+		A76C4245208C5CF700B38006 /* TempoDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = A76C4244208C5CF700B38006 /* TempoDisplay.swift */; };
+		A76C4248208C5F8C00B38006 /* InputMono-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A76C4247208C5F8C00B38006 /* InputMono-Regular.ttf */; };
 		A7BDFE5A200A97F100C1AEED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7BDFE59200A97F100C1AEED /* AppDelegate.swift */; };
 		A7BDFE61200A97F100C1AEED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A7BDFE60200A97F100C1AEED /* Assets.xcassets */; };
 		A7BDFE64200A97F100C1AEED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A7BDFE62200A97F100C1AEED /* LaunchScreen.storyboard */; };
@@ -22,6 +26,8 @@
 		A7D77F4020136F5200913F93 /* Musician.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D77F3F20136F5200913F93 /* Musician.swift */; };
 		A7D77F442013743C00913F93 /* Conduct.MusicianCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D77F432013743C00913F93 /* Conduct.MusicianCell.swift */; };
 		A7D77F4620137DA800913F93 /* ConductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D77F4520137DA800913F93 /* ConductView.swift */; };
+		A7D77F48201399B700913F93 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D77F47201399B700913F93 /* EnumCollection.swift */; };
+		A7DF266E208617D700E3B9B9 /* ConductNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF266D208617D700E3B9B9 /* ConductNavBar.swift */; };
 		A7E4F45A200E30EC00E59566 /* NetworkingContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4F459200E30EC00E59566 /* NetworkingContext.swift */; };
 		A7F063F2200E4A0C0082CBB3 /* ConductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F063F1200E4A0C0082CBB3 /* ConductViewController.swift */; };
 		A7F063F5200E4FC20082CBB3 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F063F4200E4FC20082CBB3 /* Const.swift */; };
@@ -31,11 +37,20 @@
 /* Begin PBXFileReference section */
 		1094D8AA75D6F2FB768897E2 /* Pods-Interplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Interplay.release.xcconfig"; path = "Pods/Target Support Files/Pods-Interplay/Pods-Interplay.release.xcconfig"; sourceTree = "<group>"; };
 		3B8EF705A5FD97A769C918C1 /* Pods_Interplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Interplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A71F446F205C663300A98656 /* ABLLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABLLink.h; sourceTree = "<group>"; };
+		A71F4470205C663300A98656 /* ABLLinkUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABLLinkUtils.h; sourceTree = "<group>"; };
+		A71F4471205C663300A98656 /* ABLLinkSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABLLinkSettingsViewController.h; sourceTree = "<group>"; };
+		A71F4473205C663300A98656 /* libABLLink.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libABLLink.a; sourceTree = "<group>"; };
+		A71F4477205C66EA00A98656 /* Interplay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Interplay-Bridging-Header.h"; sourceTree = "<group>"; };
+		A71F447C205C681500A98656 /* TJGLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJGLink.h; sourceTree = "<group>"; };
+		A71F447D205C681500A98656 /* TJGLink.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TJGLink.m; sourceTree = "<group>"; };
 		A72C9FEF2032CD3C0001C179 /* Style.Conductor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.Conductor.swift; sourceTree = "<group>"; };
 		A72C9FF12032CD9B0001C179 /* Packet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packet.swift; sourceTree = "<group>"; };
 		A753D0A3203C004400B3A40D /* MusicianView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicianView.swift; sourceTree = "<group>"; };
 		A753D0A5203C063500B3A40D /* Style.Musician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.Musician.swift; sourceTree = "<group>"; };
 		A753D0A7203C8DBC00B3A40D /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
+		A76C4244208C5CF700B38006 /* TempoDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TempoDisplay.swift; sourceTree = "<group>"; };
+		A76C4247208C5F8C00B38006 /* InputMono-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "InputMono-Regular.ttf"; sourceTree = "<group>"; };
 		A7BDFE56200A97F100C1AEED /* Interplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Interplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A7BDFE59200A97F100C1AEED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A7BDFE60200A97F100C1AEED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +62,8 @@
 		A7D77F3F20136F5200913F93 /* Musician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musician.swift; sourceTree = "<group>"; };
 		A7D77F432013743C00913F93 /* Conduct.MusicianCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conduct.MusicianCell.swift; sourceTree = "<group>"; };
 		A7D77F4520137DA800913F93 /* ConductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConductView.swift; sourceTree = "<group>"; };
+		A7D77F47201399B700913F93 /* EnumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
+		A7DF266D208617D700E3B9B9 /* ConductNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConductNavBar.swift; sourceTree = "<group>"; };
 		A7E4F459200E30EC00E59566 /* NetworkingContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingContext.swift; sourceTree = "<group>"; };
 		A7F063F1200E4A0C0082CBB3 /* ConductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConductViewController.swift; sourceTree = "<group>"; };
 		A7F063F4200E4FC20082CBB3 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
@@ -60,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5424FC6BE59D8DFC6C1BA326 /* Pods_Interplay.framework in Frameworks */,
+				A71F4474205C663300A98656 /* libABLLink.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,13 +92,58 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A71F446D205C663300A98656 /* LinkKit */ = {
+			isa = PBXGroup;
+			children = (
+				A71F446E205C663300A98656 /* include */,
+				A71F4472205C663300A98656 /* lib */,
+			);
+			path = LinkKit;
+			sourceTree = "<group>";
+		};
+		A71F446E205C663300A98656 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				A71F446F205C663300A98656 /* ABLLink.h */,
+				A71F4470205C663300A98656 /* ABLLinkUtils.h */,
+				A71F4471205C663300A98656 /* ABLLinkSettingsViewController.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		A71F4472205C663300A98656 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				A71F4473205C663300A98656 /* libABLLink.a */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		A71F447B205C67DE00A98656 /* LinkityLink */ = {
+			isa = PBXGroup;
+			children = (
+				A71F447C205C681500A98656 /* TJGLink.h */,
+				A71F447D205C681500A98656 /* TJGLink.m */,
+			);
+			path = LinkityLink;
+			sourceTree = "<group>";
+		};
+		A76C4246208C5F4F00B38006 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A76C4247208C5F8C00B38006 /* InputMono-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		A7BDFE4D200A97F100C1AEED = {
 			isa = PBXGroup;
 			children = (
-				A7BDFE58200A97F100C1AEED /* Interplay */,
-				A7BDFE57200A97F100C1AEED /* Products */,
-				F27A136AFC032FD0927B07D7 /* Pods */,
+				A71F446D205C663300A98656 /* LinkKit */,
 				2638104B47A127305E26F25B /* Frameworks */,
+				A7BDFE58200A97F100C1AEED /* Interplay */,
+				F27A136AFC032FD0927B07D7 /* Pods */,
+				A7BDFE57200A97F100C1AEED /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +158,8 @@
 		A7BDFE58200A97F100C1AEED /* Interplay */ = {
 			isa = PBXGroup;
 			children = (
+				A76C4246208C5F4F00B38006 /* Fonts */,
+				A71F447B205C67DE00A98656 /* LinkityLink */,
 				A7BDFE65200A97F100C1AEED /* Info.plist */,
 				A7BDFE59200A97F100C1AEED /* AppDelegate.swift */,
 				A7BDFE60200A97F100C1AEED /* Assets.xcassets */,
@@ -108,6 +173,7 @@
 		A7BDFE6D200A98A000C1AEED /* Auxiliary */ = {
 			isa = PBXGroup;
 			children = (
+				A71F4477205C66EA00A98656 /* Interplay-Bridging-Header.h */,
 				A7BDFE62200A97F100C1AEED /* LaunchScreen.storyboard */,
 			);
 			path = Auxiliary;
@@ -148,10 +214,12 @@
 		A7F063F3200E4A100082CBB3 /* Conductor */ = {
 			isa = PBXGroup;
 			children = (
+				A76C4244208C5CF700B38006 /* TempoDisplay.swift */,
 				A7F063F1200E4A0C0082CBB3 /* ConductViewController.swift */,
 				A7D77F432013743C00913F93 /* Conduct.MusicianCell.swift */,
 				A7D77F4520137DA800913F93 /* ConductView.swift */,
 				A72C9FEF2032CD3C0001C179 /* Style.Conductor.swift */,
+				A7DF266D208617D700E3B9B9 /* ConductNavBar.swift */,
 			);
 			path = Conductor;
 			sourceTree = "<group>";
@@ -210,6 +278,7 @@
 				TargetAttributes = {
 					A7BDFE55200A97F100C1AEED = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -239,6 +308,7 @@
 			files = (
 				A7BDFE64200A97F100C1AEED /* LaunchScreen.storyboard in Resources */,
 				A7BDFE61200A97F100C1AEED /* Assets.xcassets in Resources */,
+				A76C4248208C5F8C00B38006 /* InputMono-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,11 +382,14 @@
 				A7E4F45A200E30EC00E59566 /* NetworkingContext.swift in Sources */,
 				A753D0A8203C8DBC00B3A40D /* UserDefaults.swift in Sources */,
 				A7D77F442013743C00913F93 /* Conduct.MusicianCell.swift in Sources */,
+				A7DF266E208617D700E3B9B9 /* ConductNavBar.swift in Sources */,
+				A76C4245208C5CF700B38006 /* TempoDisplay.swift in Sources */,
 				A7BDFE73200A99B200C1AEED /* LobbyViewController.swift in Sources */,
 				A753D0A6203C063500B3A40D /* Style.Musician.swift in Sources */,
 				A7F063F2200E4A0C0082CBB3 /* ConductViewController.swift in Sources */,
 				A7F063F5200E4FC20082CBB3 /* Const.swift in Sources */,
 				A72C9FF02032CD3C0001C179 /* Style.Conductor.swift in Sources */,
+				A71F447E205C681500A98656 /* TJGLink.m in Sources */,
 				A7D77F4020136F5200913F93 /* Musician.swift in Sources */,
 				A72C9FF22032CD9B0001C179 /* Packet.swift in Sources */,
 				A7F063F8200E630C0082CBB3 /* MusicianViewController.swift in Sources */,
@@ -344,8 +417,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -372,7 +443,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -380,18 +450,23 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "..\\LinkKit\\include";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-lc++";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "Interplay/Auxiliary/Interplay-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 			};
 			name = Debug;
 		};
@@ -401,8 +476,6 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -429,18 +502,22 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "..\\LinkKit\\include";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-lc++";
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Interplay/Auxiliary/Interplay-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -450,13 +527,19 @@
 			baseConfigurationReference = E82001D5E42E36653C01FAFA /* Pods-Interplay.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3JFF47CZJ4;
 				INFOPLIST_FILE = Interplay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoreslav.Interplay;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LinkKit/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -467,12 +550,17 @@
 			baseConfigurationReference = 1094D8AA75D6F2FB768897E2 /* Pods-Interplay.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3JFF47CZJ4;
 				INFOPLIST_FILE = Interplay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoreslav.Interplay;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LinkKit/lib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

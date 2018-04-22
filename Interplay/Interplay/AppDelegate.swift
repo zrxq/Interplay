@@ -14,6 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     static let serviceType = "interplay-jam"
 
     var window: UIWindow?
+    let link = Link()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -29,15 +30,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let context = NetworkingContext(displayName: name, serviceType: AppDelegate.serviceType)
-        
+                
         // window
         window = UIWindow()
         window?.backgroundColor = Style.windowBackground
         window?.tintColor = Style.defaultTint
-        window?.rootViewController = LobbyViewController(with: context)
+        window?.rootViewController = LobbyViewController(context: context, link: link)
         window?.makeKeyAndVisible()
         
         return true
+    }
+    
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        link.deactivate()
+    }
+    
+    func applicationDidBecomeActive(_ application: UIApplication) {
+        link.activate()
     }
 
 }

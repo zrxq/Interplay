@@ -26,6 +26,7 @@ extension ConductViewController {
             
             musiciansCollectionView.transform = CGAffineTransform(scaleX: 1, y: -1)
             self.addSubview(musiciansCollectionView)
+            
         }
         
         required init?(coder aDecoder: NSCoder) {
@@ -41,7 +42,8 @@ extension ConductViewController {
             let columnWidth = (sectionWidth - musiciansLayout.minimumInteritemSpacing * CGFloat(numberOfColumns - 1)) / CGFloat(numberOfColumns)
             musiciansLayout.itemSize = CGSize(width: columnWidth, height:Style.Conductor.MusiciansCollectionView.cellHeight)
             
-            musiciansCollectionView.frame = self.bounds
+            musiciansCollectionView.frame = bounds
+            
         }
     }
 }
