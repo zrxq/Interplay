@@ -23,12 +23,15 @@ NSString *const TJGIsConnectedUserInfoKey = @"isConnected";
 
 const double TJGDefaultTempo = 120.;
 
-
 #pragma mark - Private parts
 
-@interface TJGLink (Callbacks)
+@interface TJGLink ()
+
+@property (readonly, assign, nonatomic) ABLLinkRef linkRef;
+
 - (void)onTempoChange:(double)tempo;
 - (void)onIsConnected:(BOOL)isConnected;
+
 @end
 
 #pragma mark - C callbacks
@@ -46,9 +49,10 @@ static void isConnectedCallback(bool isConnected, void *context) {
 #pragma mark -
 
 @implementation TJGLink {
-    ABLLinkRef _linkRef;
     UIViewController *_settings;
 }
+
+@synthesize linkRef = _linkRef;
 
 - (instancetype)init {
     if (self = [super init]) {
@@ -59,26 +63,39 @@ static void isConnectedCallback(bool isConnected, void *context) {
 }
 
 - (void)dealloc {
-    ABLLinkDelete(_linkRef);
+    ABLLinkDelete(self.linkRef);
 }
 
 #pragma mark - Public
 
 - (void)activate {
-    ABLLinkSetActive(_linkRef, true);
+    ABLLinkSetActive(self.linkRef, true);
 }
 
 - (void)deactivate {
-    ABLLinkSetActive(_linkRef, false);
+    ABLLinkSetActive(self.linkRef, false);
 }
 
 - (BOOL)isEnabled {
-    return ABLLinkIsEnabled(_linkRef);
+    return ABLLinkIsEnabled(self.linkRef);
+}
+
+- (void)captureTimelineFromThread:(TGJLinkTimelineCaptureThread)thread completion:(void (^)(TGJLinkTimeline *))handler {
+    ABLLinkSessionStateRef stateRef;
+    switch (thread) {
+        case TGJLinkTimelineCaptureThreadAudio:
+            stateRef = ABLLinkCaptureAudioSessionState(self.linkRef);
+            break;
+            
+        case TGJLinkTimelineCaptureThreadMain:
+            stateRef = ABLLinkCaptureAppSessionState(self.linkRef);
+    }
+    handler([[TGJLinkTimeline alloc] initWithLinkSessionState:stateRef]);
 }
 
 - (UIViewController *)settings {
     if (!_settings) {
-        ABLLinkSettingsViewController *linkSettingsController =  [ABLLinkSettingsViewController instance:_linkRef];
+        ABLLinkSettingsViewController *linkSettingsController =  [ABLLinkSettingsViewController instance:self.linkRef];
         UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:linkSettingsController];
         
         UIBarButtonItem *dismissButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(dismissSettings:)];
@@ -98,8 +115,8 @@ static void isConnectedCallback(bool isConnected, void *context) {
 #pragma mark - Callbacks
 
 - (void)setupCallbacks {
-    ABLLinkSetSessionTempoCallback(_linkRef, &sessionTempoCallback, (__bridge void *)(self));
-    ABLLinkSetIsConnectedCallback(_linkRef, &isConnectedCallback, (__bridge void *)(self));
+    ABLLinkSetSessionTempoCallback(self.linkRef, &sessionTempoCallback, (__bridge void *)(self));
+    ABLLinkSetIsConnectedCallback(self.linkRef, &isConnectedCallback, (__bridge void *)(self));
 }
 
 - (void)onTempoChange:(double)tempo {

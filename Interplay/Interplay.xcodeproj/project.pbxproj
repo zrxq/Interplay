@@ -10,6 +10,10 @@
 		5424FC6BE59D8DFC6C1BA326 /* Pods_Interplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B8EF705A5FD97A769C918C1 /* Pods_Interplay.framework */; };
 		A71F4474205C663300A98656 /* libABLLink.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A71F4473205C663300A98656 /* libABLLink.a */; };
 		A71F447E205C681500A98656 /* TJGLink.m in Sources */ = {isa = PBXBuildFile; fileRef = A71F447D205C681500A98656 /* TJGLink.m */; };
+		A729B9B220A2C507008B2277 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729B9B120A2C507008B2277 /* Metronome.swift */; };
+		A729B9B620A2D145008B2277 /* Strong.wav in Resources */ = {isa = PBXBuildFile; fileRef = A729B9B420A2D145008B2277 /* Strong.wav */; };
+		A729B9B720A2D145008B2277 /* Weak.wav in Resources */ = {isa = PBXBuildFile; fileRef = A729B9B520A2D145008B2277 /* Weak.wav */; };
+		A729B9BC20A32C99008B2277 /* TGJLinkTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = A729B9BB20A32C99008B2277 /* TGJLinkTimeline.m */; };
 		A72C9FF02032CD3C0001C179 /* Style.Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C9FEF2032CD3C0001C179 /* Style.Conductor.swift */; };
 		A72C9FF22032CD9B0001C179 /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C9FF12032CD9B0001C179 /* Packet.swift */; };
 		A753D0A4203C004400B3A40D /* MusicianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753D0A3203C004400B3A40D /* MusicianView.swift */; };
@@ -44,6 +48,11 @@
 		A71F4477205C66EA00A98656 /* Interplay-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Interplay-Bridging-Header.h"; sourceTree = "<group>"; };
 		A71F447C205C681500A98656 /* TJGLink.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TJGLink.h; sourceTree = "<group>"; };
 		A71F447D205C681500A98656 /* TJGLink.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TJGLink.m; sourceTree = "<group>"; };
+		A729B9B120A2C507008B2277 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
+		A729B9B420A2D145008B2277 /* Strong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Strong.wav; sourceTree = "<group>"; };
+		A729B9B520A2D145008B2277 /* Weak.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Weak.wav; sourceTree = "<group>"; };
+		A729B9B820A326C6008B2277 /* TGJLinkTimeline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGJLinkTimeline.h; sourceTree = "<group>"; };
+		A729B9BB20A32C99008B2277 /* TGJLinkTimeline.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGJLinkTimeline.m; sourceTree = "<group>"; };
 		A72C9FEF2032CD3C0001C179 /* Style.Conductor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.Conductor.swift; sourceTree = "<group>"; };
 		A72C9FF12032CD9B0001C179 /* Packet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packet.swift; sourceTree = "<group>"; };
 		A753D0A3203C004400B3A40D /* MusicianView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicianView.swift; sourceTree = "<group>"; };
@@ -124,8 +133,19 @@
 			children = (
 				A71F447C205C681500A98656 /* TJGLink.h */,
 				A71F447D205C681500A98656 /* TJGLink.m */,
+				A729B9B820A326C6008B2277 /* TGJLinkTimeline.h */,
+				A729B9BB20A32C99008B2277 /* TGJLinkTimeline.m */,
 			);
 			path = LinkityLink;
+			sourceTree = "<group>";
+		};
+		A729B9B320A2D145008B2277 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				A729B9B420A2D145008B2277 /* Strong.wav */,
+				A729B9B520A2D145008B2277 /* Weak.wav */,
+			);
+			path = Sounds;
 			sourceTree = "<group>";
 		};
 		A76C4246208C5F4F00B38006 /* Fonts */ = {
@@ -158,6 +178,7 @@
 		A7BDFE58200A97F100C1AEED /* Interplay */ = {
 			isa = PBXGroup;
 			children = (
+				A729B9B320A2D145008B2277 /* Sounds */,
 				A76C4246208C5F4F00B38006 /* Fonts */,
 				A71F447B205C67DE00A98656 /* LinkityLink */,
 				A7BDFE65200A97F100C1AEED /* Info.plist */,
@@ -207,6 +228,7 @@
 				A7D77F3F20136F5200913F93 /* Musician.swift */,
 				A72C9FF12032CD9B0001C179 /* Packet.swift */,
 				A753D0A7203C8DBC00B3A40D /* UserDefaults.swift */,
+				A729B9B120A2C507008B2277 /* Metronome.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -273,13 +295,18 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "The Jam Gym";
 				TargetAttributes = {
 					A7BDFE55200A97F100C1AEED = {
 						CreatedOnToolsVersion = 9.2;
 						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -307,8 +334,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7BDFE64200A97F100C1AEED /* LaunchScreen.storyboard in Resources */,
+				A729B9B720A2D145008B2277 /* Weak.wav in Resources */,
 				A7BDFE61200A97F100C1AEED /* Assets.xcassets in Resources */,
 				A76C4248208C5F8C00B38006 /* InputMono-Regular.ttf in Resources */,
+				A729B9B620A2D145008B2277 /* Strong.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +407,8 @@
 				A753D0A4203C004400B3A40D /* MusicianView.swift in Sources */,
 				A7BDFE5A200A97F100C1AEED /* AppDelegate.swift in Sources */,
 				A7BDFE78200AA08A00C1AEED /* LobbyView.swift in Sources */,
+				A729B9B220A2C507008B2277 /* Metronome.swift in Sources */,
+				A729B9BC20A32C99008B2277 /* TGJLinkTimeline.m in Sources */,
 				A7BDFE76200A9A5900C1AEED /* Style.swift in Sources */,
 				A7E4F45A200E30EC00E59566 /* NetworkingContext.swift in Sources */,
 				A753D0A8203C8DBC00B3A40D /* UserDefaults.swift in Sources */,
@@ -423,6 +454,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -430,6 +462,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -482,6 +515,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -489,6 +523,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

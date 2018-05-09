@@ -20,6 +20,7 @@ class LobbyViewController: UIViewController {
     
     let context: NetworkingContext
     let link: Link
+    let metro: Metronome
     
     lazy var browser: MCNearbyServiceBrowser = {
         let browser = MCNearbyServiceBrowser(peer: context.localPeerID, serviceType: context.serviceType)
@@ -31,9 +32,10 @@ class LobbyViewController: UIViewController {
         return view as! LobbyView
     }
     
-    init(context:NetworkingContext, link: Link) {
+    init(context:NetworkingContext, link: Link, metro: Metronome) {
         self.context = context
         self.link = link
+        self.metro = metro
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -108,7 +110,7 @@ extension LobbyViewController: MCNearbyServiceBrowserDelegate  {
     func browser(_ browser: MCNearbyServiceBrowser, foundPeer remotePeerID: MCPeerID, withDiscoveryInfo info: [String : String]?) {
         let session = MCSession(peer: context.localPeerID, securityIdentity: nil, encryptionPreference: .none)
         browser.invitePeer(remotePeerID, to: session, withContext: nil, timeout: 3)
-        let musicianCon = MusicianViewController(session: session)
+        let musicianCon = MusicianViewController(session: session, metro: metro)
         self.present(musicianCon, animated: false, completion: nil)
     }
     

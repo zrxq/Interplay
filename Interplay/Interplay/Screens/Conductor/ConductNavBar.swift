@@ -46,6 +46,7 @@ extension ConductViewController {
                 tempoLabel.attributedText = NSAttributedString(string: text, attributes: Style.Conductor.tempoAttributes)
             }
         }
+        
     }
     
     class func navigationController(context: NetworkingContext, link: Link) -> UINavigationController {

@@ -16,9 +16,11 @@ class MusicianViewController: UIViewController {
     }
     
     let session: MCSession
+    let metro: Metronome
     
-    init(session: MCSession) {
+    init(session: MCSession, metro: Metronome) {
         self.session = session
+        self.metro = metro
         super.init(nibName: nil, bundle: nil)
         session.delegate = self
     }
@@ -50,6 +52,12 @@ class MusicianViewController: UIViewController {
         if UserDefaults.musicianName == nil {
             musicianView.nameField.becomeFirstResponder()
         }
+        metro.start()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        metro.stop()
     }
     
 }

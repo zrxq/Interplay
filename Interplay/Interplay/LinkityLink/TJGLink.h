@@ -8,6 +8,15 @@
 
 @import Foundation;
 
+#import "TGJLinkTimeline.h"
+
+NS_ASSUME_NONNULL_BEGIN
+
+typedef NS_ENUM(NSInteger, TGJLinkTimelineCaptureThread) {
+    TGJLinkTimelineCaptureThreadMain,
+    TGJLinkTimelineCaptureThreadAudio,
+};
+
 extern NSString *const TJGLinkTempoDidChangeNotification;
 extern NSString *const TJGLinkConnectionDidChangeNotification;
 
@@ -24,7 +33,11 @@ NS_SWIFT_NAME(Link)
 - (void)activate;
 - (void)deactivate;
 
+- (void)captureTimelineFromThread:(TGJLinkTimelineCaptureThread)thread completion:(void (^)(TGJLinkTimeline *))handler;
+
 @property (readonly) BOOL isEnabled;
 @property (readonly) UIViewController *settings;
 
 @end
+
+NS_ASSUME_NONNULL_END

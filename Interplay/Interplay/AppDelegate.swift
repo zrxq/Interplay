@@ -15,6 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let link = Link()
+    lazy var metro = Metronome(link: link)
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -35,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow()
         window?.backgroundColor = Style.windowBackground
         window?.tintColor = Style.defaultTint
-        window?.rootViewController = LobbyViewController(context: context, link: link)
+        window?.rootViewController = LobbyViewController(context: context, link: link, metro: metro)
         window?.makeKeyAndVisible()
         
         return true
