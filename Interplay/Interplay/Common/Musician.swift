@@ -24,10 +24,14 @@ struct Musician {
     }
 }
 
-enum Signal: Int, ValueEnumerable {
+enum Signal: Int {
     case stop = 0
     case ready
     case play
+    
+    static var allValues: [Signal] {
+        return [.stop, .ready, .play]
+    }
 }
 
 extension Musician {

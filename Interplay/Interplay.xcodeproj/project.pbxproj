@@ -22,7 +22,6 @@
 		A7D77F4020136F5200913F93 /* Musician.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D77F3F20136F5200913F93 /* Musician.swift */; };
 		A7D77F442013743C00913F93 /* Conduct.MusicianCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D77F432013743C00913F93 /* Conduct.MusicianCell.swift */; };
 		A7D77F4620137DA800913F93 /* ConductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D77F4520137DA800913F93 /* ConductView.swift */; };
-		A7D77F48201399B700913F93 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D77F47201399B700913F93 /* EnumCollection.swift */; };
 		A7E4F45A200E30EC00E59566 /* NetworkingContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4F459200E30EC00E59566 /* NetworkingContext.swift */; };
 		A7F063F2200E4A0C0082CBB3 /* ConductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F063F1200E4A0C0082CBB3 /* ConductViewController.swift */; };
 		A7F063F5200E4FC20082CBB3 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F063F4200E4FC20082CBB3 /* Const.swift */; };
@@ -48,7 +47,6 @@
 		A7D77F3F20136F5200913F93 /* Musician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musician.swift; sourceTree = "<group>"; };
 		A7D77F432013743C00913F93 /* Conduct.MusicianCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conduct.MusicianCell.swift; sourceTree = "<group>"; };
 		A7D77F4520137DA800913F93 /* ConductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConductView.swift; sourceTree = "<group>"; };
-		A7D77F47201399B700913F93 /* EnumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
 		A7E4F459200E30EC00E59566 /* NetworkingContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingContext.swift; sourceTree = "<group>"; };
 		A7F063F1200E4A0C0082CBB3 /* ConductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConductViewController.swift; sourceTree = "<group>"; };
 		A7F063F4200E4FC20082CBB3 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
@@ -111,7 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				A7BDFE62200A97F100C1AEED /* LaunchScreen.storyboard */,
-				A7D77F47201399B700913F93 /* EnumCollection.swift */,
 			);
 			path = Auxiliary;
 			sourceTree = "<group>";
@@ -319,7 +316,6 @@
 				A753D0A6203C063500B3A40D /* Style.Musician.swift in Sources */,
 				A7F063F2200E4A0C0082CBB3 /* ConductViewController.swift in Sources */,
 				A7F063F5200E4FC20082CBB3 /* Const.swift in Sources */,
-				A7D77F48201399B700913F93 /* EnumCollection.swift in Sources */,
 				A72C9FF02032CD3C0001C179 /* Style.Conductor.swift in Sources */,
 				A7D77F4020136F5200913F93 /* Musician.swift in Sources */,
 				A72C9FF22032CD9B0001C179 /* Packet.swift in Sources */,
