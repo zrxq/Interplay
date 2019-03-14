@@ -8,8 +8,6 @@
 
 @import Foundation;
 
-#import "TGJLinkTimeline.h"
-
 NS_ASSUME_NONNULL_BEGIN
 
 typedef NS_ENUM(NSInteger, TGJLinkTimelineCaptureThread) {
@@ -30,10 +28,12 @@ extern const double TJGDefaultTempo;
 NS_SWIFT_NAME(Link)
 @interface TJGLink : NSObject
 
++ (instancetype)shared;
+
 - (void)activate;
 - (void)deactivate;
 
-- (void)captureTimelineFromThread:(TGJLinkTimelineCaptureThread)thread completion:(void (^)(TGJLinkTimeline *))handler;
+- (double)beatAtHostTime:(uint64_t)hostTimeAtOutput quantum:(double)quantum;
 
 @property (readonly) BOOL isEnabled;
 @property (readonly) UIViewController *settings;

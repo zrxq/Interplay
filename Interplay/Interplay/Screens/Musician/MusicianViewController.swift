@@ -52,7 +52,7 @@ class MusicianViewController: UIViewController {
         if UserDefaults.musicianName == nil {
             musicianView.nameField.becomeFirstResponder()
         }
-        metro.start()
+        do { try metro.start() } catch let e { handle(error: e) }
     }
     
     override func viewDidDisappear(_ animated: Bool) {

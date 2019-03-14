@@ -13,7 +13,6 @@
 		A729B9B220A2C507008B2277 /* Metronome.swift in Sources */ = {isa = PBXBuildFile; fileRef = A729B9B120A2C507008B2277 /* Metronome.swift */; };
 		A729B9B620A2D145008B2277 /* Strong.wav in Resources */ = {isa = PBXBuildFile; fileRef = A729B9B420A2D145008B2277 /* Strong.wav */; };
 		A729B9B720A2D145008B2277 /* Weak.wav in Resources */ = {isa = PBXBuildFile; fileRef = A729B9B520A2D145008B2277 /* Weak.wav */; };
-		A729B9BC20A32C99008B2277 /* TGJLinkTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = A729B9BB20A32C99008B2277 /* TGJLinkTimeline.m */; };
 		A72C9FF02032CD3C0001C179 /* Style.Conductor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C9FEF2032CD3C0001C179 /* Style.Conductor.swift */; };
 		A72C9FF22032CD9B0001C179 /* Packet.swift in Sources */ = {isa = PBXBuildFile; fileRef = A72C9FF12032CD9B0001C179 /* Packet.swift */; };
 		A753D0A4203C004400B3A40D /* MusicianView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A753D0A3203C004400B3A40D /* MusicianView.swift */; };
@@ -30,7 +29,6 @@
 		A7D77F4020136F5200913F93 /* Musician.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D77F3F20136F5200913F93 /* Musician.swift */; };
 		A7D77F442013743C00913F93 /* Conduct.MusicianCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D77F432013743C00913F93 /* Conduct.MusicianCell.swift */; };
 		A7D77F4620137DA800913F93 /* ConductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D77F4520137DA800913F93 /* ConductView.swift */; };
-		A7D77F48201399B700913F93 /* EnumCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D77F47201399B700913F93 /* EnumCollection.swift */; };
 		A7DF266E208617D700E3B9B9 /* ConductNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7DF266D208617D700E3B9B9 /* ConductNavBar.swift */; };
 		A7E4F45A200E30EC00E59566 /* NetworkingContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E4F459200E30EC00E59566 /* NetworkingContext.swift */; };
 		A7F063F2200E4A0C0082CBB3 /* ConductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7F063F1200E4A0C0082CBB3 /* ConductViewController.swift */; };
@@ -51,8 +49,6 @@
 		A729B9B120A2C507008B2277 /* Metronome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metronome.swift; sourceTree = "<group>"; };
 		A729B9B420A2D145008B2277 /* Strong.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Strong.wav; sourceTree = "<group>"; };
 		A729B9B520A2D145008B2277 /* Weak.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Weak.wav; sourceTree = "<group>"; };
-		A729B9B820A326C6008B2277 /* TGJLinkTimeline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TGJLinkTimeline.h; sourceTree = "<group>"; };
-		A729B9BB20A32C99008B2277 /* TGJLinkTimeline.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TGJLinkTimeline.m; sourceTree = "<group>"; };
 		A72C9FEF2032CD3C0001C179 /* Style.Conductor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.Conductor.swift; sourceTree = "<group>"; };
 		A72C9FF12032CD9B0001C179 /* Packet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packet.swift; sourceTree = "<group>"; };
 		A753D0A3203C004400B3A40D /* MusicianView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicianView.swift; sourceTree = "<group>"; };
@@ -71,7 +67,6 @@
 		A7D77F3F20136F5200913F93 /* Musician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Musician.swift; sourceTree = "<group>"; };
 		A7D77F432013743C00913F93 /* Conduct.MusicianCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conduct.MusicianCell.swift; sourceTree = "<group>"; };
 		A7D77F4520137DA800913F93 /* ConductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConductView.swift; sourceTree = "<group>"; };
-		A7D77F47201399B700913F93 /* EnumCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumCollection.swift; sourceTree = "<group>"; };
 		A7DF266D208617D700E3B9B9 /* ConductNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConductNavBar.swift; sourceTree = "<group>"; };
 		A7E4F459200E30EC00E59566 /* NetworkingContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingContext.swift; sourceTree = "<group>"; };
 		A7F063F1200E4A0C0082CBB3 /* ConductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConductViewController.swift; sourceTree = "<group>"; };
@@ -133,8 +128,6 @@
 			children = (
 				A71F447C205C681500A98656 /* TJGLink.h */,
 				A71F447D205C681500A98656 /* TJGLink.m */,
-				A729B9B820A326C6008B2277 /* TGJLinkTimeline.h */,
-				A729B9BB20A32C99008B2277 /* TGJLinkTimeline.m */,
 			);
 			path = LinkityLink;
 			sourceTree = "<group>";
@@ -408,7 +401,6 @@
 				A7BDFE5A200A97F100C1AEED /* AppDelegate.swift in Sources */,
 				A7BDFE78200AA08A00C1AEED /* LobbyView.swift in Sources */,
 				A729B9B220A2C507008B2277 /* Metronome.swift in Sources */,
-				A729B9BC20A32C99008B2277 /* TGJLinkTimeline.m in Sources */,
 				A7BDFE76200A9A5900C1AEED /* Style.swift in Sources */,
 				A7E4F45A200E30EC00E59566 /* NetworkingContext.swift in Sources */,
 				A753D0A8203C8DBC00B3A40D /* UserDefaults.swift in Sources */,
@@ -568,11 +560,11 @@
 				INFOPLIST_FILE = Interplay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zoreslav.Interplay;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LinkKit/lib",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoreslav.Interplay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
@@ -591,11 +583,11 @@
 				INFOPLIST_FILE = Interplay/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zoreslav.Interplay;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/LinkKit/lib",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoreslav.Interplay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

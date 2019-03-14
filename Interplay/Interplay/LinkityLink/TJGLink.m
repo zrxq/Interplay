@@ -54,6 +54,15 @@ static void isConnectedCallback(bool isConnected, void *context) {
 
 @synthesize linkRef = _linkRef;
 
++ (instancetype)shared {
+    static dispatch_once_t onceToken;
+    static TJGLink *shared;
+    dispatch_once(&onceToken, ^{
+        shared = [TJGLink new];
+    });
+    return shared;
+}
+
 - (instancetype)init {
     if (self = [super init]) {
         _linkRef = ABLLinkNew(TJGDefaultTempo);
@@ -80,17 +89,10 @@ static void isConnectedCallback(bool isConnected, void *context) {
     return ABLLinkIsEnabled(self.linkRef);
 }
 
-- (void)captureTimelineFromThread:(TGJLinkTimelineCaptureThread)thread completion:(void (^)(TGJLinkTimeline *))handler {
+- (double)beatAtHostTime:(uint64_t)hostTimeAtOutput quantum:(double)quantum {
     ABLLinkSessionStateRef stateRef;
-    switch (thread) {
-        case TGJLinkTimelineCaptureThreadAudio:
-            stateRef = ABLLinkCaptureAudioSessionState(self.linkRef);
-            break;
-            
-        case TGJLinkTimelineCaptureThreadMain:
-            stateRef = ABLLinkCaptureAppSessionState(self.linkRef);
-    }
-    handler([[TGJLinkTimeline alloc] initWithLinkSessionState:stateRef]);
+    stateRef = ABLLinkCaptureAudioSessionState(self.linkRef);
+    return ABLLinkBeatAtTime(stateRef, hostTimeAtOutput, quantum);
 }
 
 - (UIViewController *)settings {

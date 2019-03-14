@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let link = Link()
-    lazy var metro = Metronome(link: link)
+    var metro: Metronome?
+    
+    override init() {
+        super.init()
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -31,12 +35,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let context = NetworkingContext(displayName: name, serviceType: AppDelegate.serviceType)
-                
+        
         // window
         window = UIWindow()
         window?.backgroundColor = Style.windowBackground
         window?.tintColor = Style.defaultTint
-        window?.rootViewController = LobbyViewController(context: context, link: link, metro: metro)
+        
+        do {
+            metro = try Metronome(link: link)
+            window?.rootViewController = LobbyViewController(context: context, link: link, metro: metro!)
+        }
+        catch let e {
+            let alert = UIAlertController(title: NSLocalizedString("Metronome Initialization Failed", comment: "Startup metronome init failure alert title"), message: e.localizedDescription, preferredStyle: .alert)
+            window?.rootViewController = alert
+        }
+        
         window?.makeKeyAndVisible()
         
         return true
